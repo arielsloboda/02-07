@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let cadastro = [];
+        document.write("<big>Sistema de Agendamento</big>");        
+
+        let resp = prompt("Deseja Agendar Consulta? Digite S para sim ou qualquer tecla para sair");
+        
+
+        while (resp === "S" || resp === "s") {
+            let data = prompt("Digite a data agendada: ");
+            let nome = prompt("Digite Nome do Paciente: ");
+            let convenio = prompt("Digite o convênio: unimed / amil / bradesco / particular");
+            let telefone = prompt("Digite Telefone do Paciente: ");           
+
+            cadastro.push({
+               data: data,
+               nome: nome,
+               convenio: convenio,
+               telefone: telefone,
+            })
+
+            resp = prompt("Deseja Continuar no Cadastro? Digite S para sim ou qualquer tecla para sair");
+        }
+     
+        document.write("<p><br><big><b>Relatório de Clientes:</b></big><br></p>");
+
+      
+        for (let i = 0; i < cadastro.length; i++) {
+            document.write(`<p><b>Nome</b>: ${cadastro[i].nome} <p><b>Telefone</b>: ${cadastro[i].telefone}</p> <p><b>Convênio</b>: ${cadastro[i].convenio} <p><b>Data agendada</b>: ${cadastro[i].data}<br>`);
+        }
+    </script>
+
+
+
+       
+   </script>
+</body>
+</html>

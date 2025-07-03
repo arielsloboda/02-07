@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let clientes = []; 
+
+        document.write("Sistema de Cadastro");        
+
+        let resp = prompt("Deseja Cadastrar clientes? Digite S para sim ou qualquer tecla para sair");
+        
+
+        while (resp === "S" || resp === "s") {
+            let nome = prompt("Digite Nome do Cliente: ");
+            let telefone = prompt("Digite Telefone do Cliente: ");           
+
+            
+            clientes.push({
+                nome: nome,
+                telefone: telefone,
+            });
+
+            resp = prompt("Deseja Continuar no Cadastro? Digite S para sim ou qualquer tecla para sair");
+        }
+
+       
+        document.write("<br>Relatório de Clientes:<br>");
+
+      
+        for (let i = 0; i < clientes.length; i++) {
+            document.write(`Nome: ${clientes[i].nome}, Telefone: ${clientes[i].telefone}<br>`);
+        }
+    </script>
+</body>
+</html>
